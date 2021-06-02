@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{unicode-math}
+\setmainfont{Arial}
+\DeclareMathVersion{bhitc}
+\setmathfont[version=normal]{Arial}
+\setmathfont[version=bhitc]{Bradley Hand ITC}
+\newenvironment{example}{\mathversion{normal}}{}
+\newenvironment{exampletwo}{\mathversion{bhitc}}{}
+
+\begin{document}
+\begin{example}  Prove the 33 is a factor of $2^{55}+1$ \end{example}\\
+\begin{exampletwo}
+ First note 33 that $2^{55}+1 =(2^5)^{11}+1$
+\end{exampletwo}
+
+\end{document}
