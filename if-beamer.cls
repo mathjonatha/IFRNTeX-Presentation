@@ -1,19 +1,14 @@
-\ProvidesClass{uu-beamer}[Uppsala University Presentation Template v1.0]
+\ProvidesClass{if-beamer}[Instituto Federal de Ciência e Tecnologia, versão 1.0]
 \NeedsTeXFormat{LaTeX2e}
 
 % Parent class
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
 \ProcessOptions \relax
-\LoadClass[t]{beamer} % o [t] faz com que o texto começa no inicio dos slides, não ao meio como é de costume acontecer.
+\LoadClass{beamer} % o [t] faz com que o texto comece no inicio dos slides, não ao meio como é de costume acontecer
 
 % Set subtitles black
 \usecolortheme[named=black]{structure}
 
-% Margins do slide
-\usepackage{changepage}
-% \setbeamersize{text margin left=10mm,text margin right=10mm} 
-% \setbeamersize{sidebar width left=-10mm, sidebar width right=-10mm}
-% \setbeamersize{text margin left=-10mm,text margin right=-10mm} 
 
 %Font sizes
 \setbeamerfont*{title}{size=\LARGE}
@@ -23,11 +18,10 @@
 
 
 % News commands
-\newcommand{\titulo}{\def\inserttitulo{{\large \bf \inserttitle } \\[3mm] {\small \insertauthor}}}% Cria o comando para adicionar o titulo da aula
-
-
-
+% \newcommand{\titulo}{\def\inserttitulo{{\large \bf \inserttitle } \\[3mm] {\small \insertauthor}}}% Cria o comando para adicionar o titulo da aula
+\newcommand{\titulo}[2]{\def\inserttitulo{{\large \bf #1 } \\[3mm] {\small #2}}}% Cria o comando para adicionar o titulo da aula
 \titulo{}{}
+
 % Remove default logo
 \logo{}
 
@@ -39,9 +33,9 @@
 
 \usebackgroundtemplate{
     \begin{tikzpicture}[overlay,remember picture]
-        % Background picture
-        \node[at=(current page.south east),anchor=south east,inner sep=0pt,outer sep=0pt] {
-            \includegraphics[keepaspectratio,height=0.8\paperheight]{uu_logo_bg}};
+        % % Background picture
+        % \node[at=(current page.south east),anchor=south east,inner sep=0pt,outer sep=0pt] {
+        %     \includegraphics[keepaspectratio,height=0.8\paperheight]{uu_logo_bg}};
 
         % Top border
         \draw [line width=2mm,color=bgcolor] (current page.north west) rectangle (current page.north east);
