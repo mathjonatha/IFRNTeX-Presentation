@@ -88,10 +88,10 @@
 
 
 % Bullet das listas, seções. Desativar caso queira a númeração no súmario.
-% \setbeamertemplate{itemize items}[circle]
 % \setbeamertemplate{sections/subsections in toc}[circle]
-% \setbeamertemplate{itemize item}[circle]
-% \setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[circle]
 
 % Fonts 
 % \usepackage{mathptmx}
