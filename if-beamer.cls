@@ -9,6 +9,8 @@
 % Set subtitles black
 \usecolortheme[named=black]{structure}
 
+\setbeamertemplate{section in toc}[sections numbered] % gera a numeração das seções no sumário
+\setbeamertemplate{subsection in toc}[subsections numbered]  % gera a numeração das subseções no sumário
 
 %Font sizes
 \setbeamerfont*{title}{size=\LARGE}
@@ -79,13 +81,17 @@
 \setbeamersize{text margin left=1cm}
 \setbeamersize{text margin right=1cm}
 
+% \setbeamercolor{structure}{fg=bgcolor}
 
 % Uppercase titles
 \newcommand{\Frametitle}[1]{\frametitle{\large \MakeUppercase{#1}}}
 
 
-% Bullet lists
-\setbeamertemplate{itemize items}[circle]
+% Bullet das listas, seções. Desativar caso queira a númeração no súmario.
+% \setbeamertemplate{itemize items}[circle]
+% \setbeamertemplate{sections/subsections in toc}[circle]
+% \setbeamertemplate{itemize item}[circle]
+% \setbeamertemplate{itemize subitem}[circle]
 
 % Fonts 
 % \usepackage{mathptmx}
@@ -201,7 +207,7 @@
     }
 }
 
-\usepackage{pslatex}
+% \usepackage{pslatex}
 % \usepackage[math]{kurier}
 % CONFIGURAÇÕES
 % \setmainfont{OpenSans-Regular.ttf}[
